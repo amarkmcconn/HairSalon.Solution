@@ -7,20 +7,27 @@
 
 <div class="container">
   <h2>Stylists</h2>
-   
-   @if (@Model.Count == 0)
+  @if (@Model.Count == 0)
   {
     <h4>No Stylists have been added</h4>
   }
   <ul>
-    @foreach (Stylist stylist in Model)
-    {
-      <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
-    }
+  @foreach (Stylist stylist in Model)
+  {
+    <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
+  }
   </ul>
-
-  <p>@Html.ActionLink("Add new Stylist", "Create")</p>
-  <p>@Html.ActionLink("Add a new Client", "Create", "Clients")</p>
-  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+  <br> @using (Html.BeginForm("Create", "Stylists", FormMethod.Get))
+  {
+    <input type="submit" value="Add a new Stylist" class="btn btn-primary">
+  }
+  <br> @using (Html.BeginForm("Create", "Clients", FormMethod.Get))
+  {
+    <input type="submit" value="Add a new Client" class="btn btn-secondary">
+  }
+  <br> @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+  {
+    <input type="submit" value="Home" class="btn btn-success">
+  }
 </div>
 

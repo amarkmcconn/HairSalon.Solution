@@ -6,7 +6,6 @@
 
 <div class="container">
   <h4>Add a new client</h4>
-
   @using (Html.BeginForm())
   {
     @Html.LabelFor(model => model.Name)
@@ -15,9 +14,10 @@
     @Html.TextBoxFor(model => model.PhoneNumber)
     <br>@Html.LabelFor(model => model.Stylist)
     @Html.DropDownList("StylistId")
-
     <br><input type="submit" value="Add Client" class="btn btn-success" />
   }
-
-<p>@Html.ActionLink("Show all Clients", "Index")</p>
+  <br> @using (Html.BeginForm("Index", "Clients", FormMethod.Get))
+  {
+    <input type="submit" value="Show all Clients" class="btn btn-success">
+  }
 </div>  
