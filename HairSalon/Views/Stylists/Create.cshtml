@@ -4,9 +4,9 @@
 
 @model HairSalon.Models.Stylist
 
-<div>
+<div class="container">
   <h4>Add a new Stylist</h4>
-
+  <img src='~/img/hair-baby.gif'>
   @using (Html.BeginForm())
   {
     @Html.LabelFor(model => model.Name)
