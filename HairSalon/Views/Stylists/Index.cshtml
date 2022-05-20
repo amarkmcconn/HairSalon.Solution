@@ -12,12 +12,20 @@
   {
     <h4>No Stylists have been added</h4>
   }
-  <ul>
-  @foreach (Stylist stylist in Model)
-  {
-    <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
-  }
-  </ul>
+  
+  <table>
+    <tr>
+      <th>Stylist</th>
+      <th>Stylist Hire Date</th>
+    </tr>
+    @foreach (Stylist stylist in Model)
+    {
+      <tr>
+        <td>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</td>
+        <td>@stylist.DateHired</td>
+      </tr>
+    }
+  </table>
   <br> @using (Html.BeginForm("Create", "Stylists", FormMethod.Get))
   {
     <input type="submit" value="Add a new Stylist" class="btn btn-primary">
