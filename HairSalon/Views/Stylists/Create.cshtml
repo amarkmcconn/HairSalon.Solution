@@ -11,6 +11,8 @@
   {
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.DateHired)
+    @Html.TextBoxFor(model => model.DateHired)
     <input type="submit" value="Add a new Stylist" />
   }
   <br> @using (Html.BeginForm("Index", "Stylists", FormMethod.Get))

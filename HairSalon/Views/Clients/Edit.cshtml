@@ -10,13 +10,15 @@
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.ClientId)
-
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
-  @Html.LabelFor(model => model.PhoneNumber)
+  <br>@Html.LabelFor(model => model.PhoneNumber)
   @Html.EditorFor(model => model.PhoneNumber)
-
-  @Html.LabelFor(model => model.Stylist)
+  <br>@Html.LabelFor(model => model.Pronoun)
+  @Html.EditorFor(model => model.Pronoun)
+  <br>@Html.LabelFor(model => model.Email)
+  @Html.EditorFor(model => model.Email)
+  <br>@Html.LabelFor(model => model.Stylist)
   @Html.DropDownList("StylistId")
 
   <input type="submit" value="Save" />
