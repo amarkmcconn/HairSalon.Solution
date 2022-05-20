@@ -5,6 +5,14 @@
 <div class="container">
 <h2>Eau Claire's Salon</h2>
 <h3>Stylist and Client Management</h3>
-<p>@Html.ActionLink("See all Clients", "Index", "Clients")</p>
-<p>@Html.ActionLink("See all Stylists", "Index", "Stylists")</p>
+
+@using (Html.BeginForm("Index", "Clients", FormMethod.Get))
+  {
+    <input type="submit" value="See All Clients" class="btn btn-primary">
+  }
+
+@using (Html.BeginForm("Index", "Stylists", FormMethod.Get))
+  {
+    <input type="submit" value="See All Stylists" class="btn btn-secondary">
+  }
 </div>
