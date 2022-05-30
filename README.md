@@ -20,6 +20,9 @@
 
 _This is an MVC application to help a Salon keep track of Stylists and the Stylist's clients. The salon will be able to add a list of stylists working at the salon, and for each stylist, add clients who see that stylist. The stylists have specific specialties, so each client can only see (belong to) a single stylist._
 
+![image](https://user-images.githubusercontent.com/101524368/170919994-79767c12-6045-4874-86f4-86c7b2113dd9.png)
+
+
 ## Setup/Installation Requirements 🖊️
 
 * _Clone this repo: <https://github.com/amarkmcconn/HairSalon.Solution>_
